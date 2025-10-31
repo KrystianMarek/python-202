@@ -127,4 +127,3 @@ def demonstrate_all() -> None:
 
 if __name__ == "__main__":
     demonstrate_all()
-

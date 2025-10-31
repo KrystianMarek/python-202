@@ -17,4 +17,3 @@ def test_run_example() -> None:
 
     result = run_example(sample_func)
     assert result == 42
-

@@ -41,4 +41,3 @@ def example_context(name: str):
         yield
     finally:
         print(f"{separator} END {separator}\n")
-

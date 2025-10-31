@@ -88,8 +88,7 @@ class TypedProperty[T]:
         """Set value with type checking."""
         if not isinstance(value, self.expected_type):
             raise TypeError(
-                f"{self.name} must be {self.expected_type.__name__}, "
-                f"got {type(value).__name__}"
+                f"{self.name} must be {self.expected_type.__name__}, " f"got {type(value).__name__}"
             )
         setattr(obj, self.name, value)
 
@@ -205,9 +204,7 @@ class RangeValidated:
     def __set__(self, obj: Any, value: float) -> None:
         """Set value with range validation."""
         if not self.min_value <= value <= self.max_value:
-            raise ValueError(
-                f"Value must be between {self.min_value} and {self.max_value}"
-            )
+            raise ValueError(f"Value must be between {self.min_value} and {self.max_value}")
         setattr(obj, self.name, value)
 
 
@@ -271,4 +268,3 @@ def demonstrate_all() -> None:
 
 if __name__ == "__main__":
     demonstrate_all()
-

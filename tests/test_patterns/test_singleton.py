@@ -29,4 +29,3 @@ def test_singleton_thread_safety() -> None:
     # All instances should be the same object
     unique_ids = len({id(instance) for instance in instances})
     assert unique_ids == 1
-

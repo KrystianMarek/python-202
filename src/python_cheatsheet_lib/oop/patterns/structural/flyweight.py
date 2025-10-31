@@ -301,4 +301,3 @@ def memory_comparison() -> None:
 if __name__ == "__main__":
     demonstrate_all()
     memory_comparison()
-

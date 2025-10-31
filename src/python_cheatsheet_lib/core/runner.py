@@ -66,7 +66,9 @@ def main() -> None:
     """
     if len(sys.argv) < 2:
         print("Usage: cheatsheet-run <module.function>")
-        print("Example: cheatsheet-run python_cheatsheet_lib.oop.patterns.creational.singleton_example")
+        print(
+            "Example: cheatsheet-run python_cheatsheet_lib.oop.patterns.creational.singleton_example"
+        )
         sys.exit(1)
 
     module_path = sys.argv[1]
@@ -80,6 +82,7 @@ def main() -> None:
 
         # Import module
         import importlib
+
         module = importlib.import_module(module_name)
 
         # Get function
@@ -94,4 +97,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

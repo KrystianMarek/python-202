@@ -371,4 +371,3 @@ def benchmark_pool() -> None:
 if __name__ == "__main__":
     demonstrate_all()
     benchmark_pool()
-

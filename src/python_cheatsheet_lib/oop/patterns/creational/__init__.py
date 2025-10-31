@@ -10,4 +10,3 @@ __all__ = [
     "prototype",
     "object_pool",
 ]
-

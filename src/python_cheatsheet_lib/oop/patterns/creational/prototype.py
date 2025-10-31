@@ -32,7 +32,6 @@ class Character:
     mana: int
     inventory: list[str] = field(default_factory=list)
 
-
     def clone(self) -> Character:
         """
         Create a deep copy of this character.
@@ -319,4 +318,3 @@ def compare_copy_methods() -> None:
 if __name__ == "__main__":
     demonstrate_all()
     compare_copy_methods()
-

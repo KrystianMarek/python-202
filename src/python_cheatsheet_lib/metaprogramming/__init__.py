@@ -10,4 +10,3 @@ __all__ = [
     "decorators_advanced",
     "protocols_advanced",
 ]
-

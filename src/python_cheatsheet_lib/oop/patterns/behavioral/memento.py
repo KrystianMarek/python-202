@@ -47,9 +47,7 @@ class TextEditor:
     def type(self, text: str) -> None:
         """Type text at cursor position."""
         self._content = (
-            self._content[: self._cursor_position]
-            + text
-            + self._content[self._cursor_position :]
+            self._content[: self._cursor_position] + text + self._content[self._cursor_position :]
         )
         self._cursor_position += len(text)
 
@@ -250,4 +248,3 @@ def demonstrate_all() -> None:
 
 if __name__ == "__main__":
     demonstrate_all()
-

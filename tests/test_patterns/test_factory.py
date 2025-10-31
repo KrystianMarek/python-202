@@ -24,4 +24,3 @@ def test_registry_pattern() -> None:
     serializer = Serializer.create("json")
     result = serializer.serialize({"key": "value"})
     assert "JSON" in result
-

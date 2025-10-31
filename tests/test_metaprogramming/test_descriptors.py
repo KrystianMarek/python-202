@@ -45,4 +45,3 @@ def test_lazy_property() -> None:
     data2 = loader.data
     assert call_count == 1  # Cached, not called again
     assert data2 == [1, 2, 3]
-

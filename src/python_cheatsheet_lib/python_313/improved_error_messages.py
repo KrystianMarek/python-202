@@ -119,7 +119,7 @@ def example_better_syntax_errors() -> None:
     print("rather than just the line.\n")
 
     # Example of what improved errors look like:
-    example_code = '''
+    example_code = """
     # Before Python 3.13:
     # SyntaxError: invalid syntax (whole line highlighted)
 
@@ -128,7 +128,7 @@ def example_better_syntax_errors() -> None:
     #     if x = 5:  # Assignment in condition
     #          ^
     # The caret points exactly at the '=' sign
-    '''
+    """
     print(example_code)
 
 
@@ -177,4 +177,3 @@ def demonstrate_all() -> None:
 
 if __name__ == "__main__":
     demonstrate_all()
-

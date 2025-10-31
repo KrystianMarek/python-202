@@ -283,4 +283,3 @@ def test_thread_safety() -> None:
 if __name__ == "__main__":
     demonstrate_all()
     test_thread_safety()
-
