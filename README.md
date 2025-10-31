@@ -19,26 +19,27 @@ An interactive, example-driven cheat sheet for advanced Python concepts, emphasi
 
 ## 📦 Installation
 
-### From PyPI (when published)
+### Development Installation
 
-```bash
-pip install python-cheatsheet-lib
-```
-
-### Development Installation with uv
+This package is for educational purposes and is not published to PyPI. To use it locally:
 
 ```bash
 # Install uv if you haven't already
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone the repository
-git clone https://github.com/python-cheatsheet-lib/python-cheatsheet-lib.git
-cd python-cheatsheet-lib
+git clone git@github.com:KrystianMarek/python-202.git
+cd python-202
 
 # Create virtual environment and install dependencies
 uv venv --python 3.13
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install in editable mode with all dependencies
 uv pip install -e ".[dev,docs,async]"
+
+# (Optional) Install pre-commit hooks
+uv run pre-commit install
 ```
 
 ## 🚀 Quick Start
