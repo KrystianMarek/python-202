@@ -6,8 +6,7 @@ Descriptors are objects that define how attributes are accessed, set, or deleted
 
 from __future__ import annotations
 
-from typing import Any, TypeVar, Generic
-
+from typing import Any, TypeVar
 
 T = TypeVar("T")
 

@@ -7,8 +7,6 @@ while keeping extrinsic (unique) state separate.
 
 from __future__ import annotations
 
-from typing import Any
-
 
 # Flyweight: Shared character style
 class CharacterStyle:
@@ -247,7 +245,7 @@ def demonstrate_all() -> None:
 
     print(f"   Characters: {doc.get_character_count()}")
     print(f"   Unique styles: {doc.get_style_count()}")
-    print(f"\n   First few characters:")
+    print("\n   First few characters:")
     print(doc.render())
     print()
 
@@ -269,7 +267,7 @@ def demonstrate_all() -> None:
 
     print(f"   Particles: {len(system.particles)}")
     print(f"   Particle types: {len(system.particle_types)}")
-    print(f"\n   Rendered particles:")
+    print("\n   Rendered particles:")
     for rendered in system.render():
         print(f"     {rendered}")
 
@@ -297,7 +295,7 @@ def memory_comparison() -> None:
 
     print(f"Without flyweight: ~{sys.getsizeof(char_without)} bytes per character")
     print(f"With flyweight: ~{sys.getsizeof(char_with)} bytes per character")
-    print(f"   (Style object is shared among all characters)")
+    print("   (Style object is shared among all characters)")
 
 
 if __name__ == "__main__":

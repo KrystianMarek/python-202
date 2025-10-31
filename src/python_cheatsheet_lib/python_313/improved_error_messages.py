@@ -147,7 +147,7 @@ def exception_notes_example() -> None:
 
     try:
         data = [1, 2, "three", 4]
-        total = sum(data)  # type: ignore
+        _total = sum(data)  # type: ignore
     except TypeError as e:
         e.add_note("This error occurred while processing user input")
         e.add_note("Data should contain only numbers")

@@ -6,8 +6,8 @@ Provides a way to traverse a collection without exposing its internal structure.
 
 from __future__ import annotations
 
-from typing import Iterator, TypeVar
-
+from collections.abc import Iterator
+from typing import TypeVar
 
 T = TypeVar("T")
 

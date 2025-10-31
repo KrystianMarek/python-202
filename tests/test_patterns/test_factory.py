@@ -1,8 +1,8 @@
 """Tests for Factory Method pattern."""
 
 from python_cheatsheet_lib.oop.patterns.creational.factory_method import (
-    create_logger,
     Serializer,
+    create_logger,
 )
 
 

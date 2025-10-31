@@ -7,7 +7,6 @@ Treats individual objects and compositions uniformly using recursive composition
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Iterable
 
 
 # Component interface

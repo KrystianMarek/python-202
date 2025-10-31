@@ -12,8 +12,7 @@ import time
 from contextlib import contextmanager
 from dataclasses import dataclass
 from queue import Empty, Queue
-from typing import Any, Generic, TypeVar
-
+from typing import Any, TypeVar
 
 T = TypeVar("T")
 
@@ -96,8 +95,7 @@ class ObjectPool[T]:
                     obj = self._factory()
                     self._created_count += 1
                     return obj
-                else:
-                    raise TimeoutError("Pool exhausted and max size reached")
+                raise TimeoutError("Pool exhausted and max size reached") from None
 
     def release(self, obj: T) -> None:
         """

@@ -184,7 +184,7 @@ def demonstrate_all() -> None:
 
     bool_context = {"a": True, "b": False, "c": True}
     bool_result = bool_expr.evaluate(bool_context)
-    print(f"   (a AND b) OR (NOT c)")
+    print("   (a AND b) OR (NOT c)")
     print(f"   where a={bool_context['a']}, b={bool_context['b']}, c={bool_context['c']}")
     print(f"   Result: {bool_result}")
 

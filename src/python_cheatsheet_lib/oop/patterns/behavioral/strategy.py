@@ -7,7 +7,8 @@ Encapsulates algorithms and makes them interchangeable at runtime.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Callable, Protocol
+from collections.abc import Callable
+from typing import Protocol
 
 
 # Strategy interface

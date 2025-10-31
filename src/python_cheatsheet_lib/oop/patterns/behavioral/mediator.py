@@ -7,7 +7,6 @@ Reduces coupling by keeping objects from referring to each other explicitly.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any
 
 
 # Mediator interface

@@ -10,7 +10,8 @@ from __future__ import annotations
 import functools
 import time
 from abc import ABC, abstractmethod
-from typing import Any, Callable, ParamSpec, TypeVar
+from collections.abc import Callable
+from typing import Any, ParamSpec, TypeVar
 
 
 # Structural Decorator Pattern (Classic GoF)

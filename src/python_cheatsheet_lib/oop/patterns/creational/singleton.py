@@ -274,7 +274,7 @@ def test_thread_safety() -> None:
         thread.join()
 
     # All instances should be the same object
-    unique_ids = len(set(id(instance) for instance in instances))
+    unique_ids = len({id(instance) for instance in instances})
     print(f"Created {len(instances)} references")
     print(f"Unique instances: {unique_ids}")
     print(f"Thread-safe: {unique_ids == 1}\n")

@@ -1,6 +1,6 @@
 """Tests for descriptors."""
 
-from python_cheatsheet_lib.metaprogramming.descriptors import TypedProperty, LazyProperty
+from python_cheatsheet_lib.metaprogramming.descriptors import LazyProperty, TypedProperty
 
 
 def test_typed_property() -> None:

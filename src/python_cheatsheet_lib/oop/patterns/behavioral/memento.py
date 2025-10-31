@@ -7,7 +7,6 @@ Provides ability to restore object to its previous state (undo).
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
 
 
 # Memento
@@ -228,7 +227,7 @@ def demonstrate_all() -> None:
     game = Game()
 
     # Save at level 1
-    save1 = game.save()
+    _save1 = game.save()
     print(f"   Level {game.level}, Score {game.score}")
 
     # Progress

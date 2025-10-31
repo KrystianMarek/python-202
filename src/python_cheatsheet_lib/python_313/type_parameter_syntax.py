@@ -8,7 +8,6 @@ from __future__ import annotations
 
 from typing import Protocol, TypeVar
 
-
 # Traditional approach (pre-PEP 695)
 T = TypeVar("T")
 U = TypeVar("U")
@@ -289,7 +288,7 @@ def demonstrate_all() -> None:
     stack.push(1)
     stack.push(2)
     stack.push(3)
-    print(f"   Stack operations: pushed 1, 2, 3")
+    print("   Stack operations: pushed 1, 2, 3")
     print(f"   pop() = {stack.pop()}")
     print(f"   peek() = {stack.peek()}")
     print()

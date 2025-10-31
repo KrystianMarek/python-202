@@ -1,6 +1,7 @@
 """Tests for Singleton pattern."""
 
 import threading
+
 from python_cheatsheet_lib.oop.patterns.creational.singleton import DatabaseConnection
 
 
@@ -26,6 +27,6 @@ def test_singleton_thread_safety() -> None:
         t.join()
 
     # All instances should be the same object
-    unique_ids = len(set(id(instance) for instance in instances))
+    unique_ids = len({id(instance) for instance in instances})
     assert unique_ids == 1
 

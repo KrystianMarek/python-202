@@ -8,7 +8,6 @@ the same construction process to create different representations.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
 
 
 # Product class

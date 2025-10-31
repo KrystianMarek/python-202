@@ -12,8 +12,8 @@ from __future__ import annotations
 import sys
 import threading
 import time
+from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
-from typing import Callable
 
 
 def check_gil_status() -> dict[str, bool | str]:
@@ -223,7 +223,7 @@ def io_bound_example() -> None:
     start = time.perf_counter()
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = [executor.submit(simulate_io_task, i, 0.1) for i in range(4)]
-        results = [f.result() for f in futures]
+        _results = [f.result() for f in futures]
     elapsed_multi = time.perf_counter() - start
 
     print(f"Multi-threaded I/O: {elapsed_multi:.4f} seconds")

@@ -13,7 +13,7 @@ from __future__ import annotations
 import os
 import sys
 import time
-from typing import Callable
+from collections.abc import Callable
 
 
 def check_jit_status() -> dict[str, str | bool]:
@@ -101,7 +101,7 @@ def benchmark_function(func: Callable[[int], int], n: int, iterations: int = 1) 
     """
     start_time = time.perf_counter()
     for _ in range(iterations):
-        result = func(n)
+        _result = func(n)
     end_time = time.perf_counter()
     return (end_time - start_time) / iterations
 
@@ -193,7 +193,7 @@ def compare_jit_performance() -> None:
     matrix_b = [[float(i * j) for j in range(size)] for i in range(size)]
 
     start = time.perf_counter()
-    result = matrix_multiply(matrix_a, matrix_b)
+    _result = matrix_multiply(matrix_a, matrix_b)
     elapsed = time.perf_counter() - start
     print(f"   Time: {elapsed:.6f} seconds\n")
 

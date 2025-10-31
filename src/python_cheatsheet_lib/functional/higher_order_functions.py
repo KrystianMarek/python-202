@@ -7,8 +7,8 @@ Includes map, filter, reduce, and custom higher-order functions.
 from __future__ import annotations
 
 import functools
-from typing import Callable, TypeVar
-
+from collections.abc import Callable
+from typing import TypeVar
 
 T = TypeVar("T")
 R = TypeVar("R")
@@ -18,7 +18,7 @@ def demonstrate_map() -> None:
     """Demonstrate map function."""
     print("1. Map:")
     numbers = [1, 2, 3, 4, 5]
-    squared = list(map(lambda x: x**2, numbers))
+    squared = [x**2 for x in numbers]
     print(f"   {numbers} -> {squared}")
 
 
@@ -67,8 +67,13 @@ def demonstrate_all() -> None:
     demonstrate_reduce()
 
     print("\n4. Function Composition:")
-    add_one = lambda x: x + 1
-    double = lambda x: x * 2
+
+    def add_one(x: int) -> int:
+        return x + 1
+
+    def double(x: int) -> int:
+        return x * 2
+
     f = compose(double, add_one)
     result = f(3)
     print(f"   compose(double, add_one)(3) = {result}")

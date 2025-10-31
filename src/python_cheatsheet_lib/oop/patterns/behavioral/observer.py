@@ -31,6 +31,11 @@ class Subject(ABC):
         for observer in self._observers:
             observer.update(event, data)
 
+    @abstractmethod
+    def _state_changed(self) -> None:
+        """Hook for subclasses to override."""
+        pass
+
 
 # Observer
 class Observer(ABC):
@@ -64,6 +69,10 @@ class StockMarket(Subject):
         """Set stock price and notify observers."""
         self._prices[symbol] = price
         self.notify("price_changed", {"symbol": symbol, "price": price})
+
+    def _state_changed(self) -> None:
+        """State change hook."""
+        pass
 
     def get_price(self, symbol: str) -> float | None:
         """Get current price."""

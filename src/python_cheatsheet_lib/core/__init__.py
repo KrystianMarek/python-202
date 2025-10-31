@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from .runner import run_example, example_context
+from .runner import example_context, run_example
 
 __all__ = ["run_example", "example_context"]
 
